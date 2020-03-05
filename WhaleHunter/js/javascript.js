@@ -27,7 +27,6 @@ function init() {
     createFloor();
     createWhale();
     floor.generateFloor();
-    loadSounds();
 
     
     document.addEventListener('mousemove', handleMouseMove, false);
@@ -1032,15 +1031,6 @@ function createMineExplosion(i)
     scene.remove(floor.mine[i].mesh); 
 
     scene.add(explosion.mesh);
-}
-
-var song;
-function loadSounds() {
-	song = new Audio("sounds/song.mp3")
-
-	song.loop = true;
-	song.volume = .2;
-	song.play();
 }
 
 function handleWindowResize() {
